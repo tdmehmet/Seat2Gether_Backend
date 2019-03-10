@@ -1,0 +1,12 @@
+/.vs
+/Seat2Gether/bin
+/Seat2Gether/App_Data
+/Seat2Gether/obj
+/Seat2Gether/*.user
+/Seat2Gether/rolling.log
+/obj/Debug
+/obj/Release
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+/Seat2Gether/seat2gether.log
+*.pubxml.*

@@ -1,0 +1,1260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Textbox Name="lblSesselblenden">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Sesselblenden</Value>
+                <Style>
+                  <FontSize>16pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>0.5821cm</Top>
+        <Left>0.4721cm</Left>
+        <Height>0.78521cm</Height>
+        <Width>8.00333cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Seite">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Seite.Value, "Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Blockierungen")</Value>
+                <Style>
+                  <FontSize>16pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Seite</rd:DefaultName>
+        <Top>0.5821cm</Top>
+        <Left>9.09752cm</Left>
+        <Height>0.78521cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="BBNr">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!BBNr.Value, "Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Blockierungen")</Value>
+                <Style>
+                  <FontSize>16pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>BBNr</rd:DefaultName>
+        <Top>0.5821cm</Top>
+        <Left>11.95502cm</Left>
+        <Height>0.78521cm</Height>
+        <Width>7.71229cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="lblSpalte">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Spalte</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>1.74628cm</Top>
+        <Left>0.4721cm</Left>
+        <Height>0.67938cm</Height>
+        <Width>1.49458cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="lblAnzahl">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Anzahl</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>1.74628cm</Top>
+        <Left>3.04266cm</Left>
+        <Height>0.67938cm</Height>
+        <Width>1.75916cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="lbl2Programm">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>2-Programm</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>1.74626cm</Top>
+        <Left>5.76377cm</Left>
+        <Height>0.67938cm</Height>
+        <Width>2.71166cm</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="lbl1Programm">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>1-Programm</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>1.74628cm</Top>
+        <Left>11.95502cm</Left>
+        <Height>0.67938cm</Height>
+        <Width>2.84396cm</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="lblBlockierungen">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Blockierungen</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>1.74626cm</Top>
+        <Left>15.79147cm</Left>
+        <Height>0.67938cm</Height>
+        <Width>3.87584cm</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="lblGurtGangseitig">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Gurt_Gangseitig</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>2.92632cm</Top>
+        <Left>0.4721cm</Left>
+        <Height>0.67938cm</Height>
+        <Width>8.00333cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line4">
+        <Top>8.25503cm</Top>
+        <Left>0.37826cm</Left>
+        <Height>0cm</Height>
+        <Width>19.28905cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+            <Width>3pt</Width>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Spalte">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Spalte.Value, "Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Blockierungen")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Spalte</rd:DefaultName>
+        <Top>4.41708cm</Top>
+        <Left>0.4721cm</Left>
+        <Height>0.67938cm</Height>
+        <Width>1.49458cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Anzahl_Programm">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!Anzahl_Programm.Value, "Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Blockierungen")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Anzahl_Programm</rd:DefaultName>
+        <Top>4.41708cm</Top>
+        <Left>3.04266cm</Left>
+        <Height>0.67938cm</Height>
+        <Width>1.75916cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Programm_doppelt">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Programm_doppelt.Value, "Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Blockierungen")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Programm_doppelt</rd:DefaultName>
+        <Top>4.41708cm</Top>
+        <Left>5.76377cm</Left>
+        <Height>0.67938cm</Height>
+        <Width>2.71166cm</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Programm_einzeln">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Programm_einzeln.Value, "Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Blockierungen")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Programm_einzeln</rd:DefaultName>
+        <Top>4.33919cm</Top>
+        <Left>11.95502cm</Left>
+        <Height>0.67938cm</Height>
+        <Width>2.84396cm</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Blockierungen">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!Blockierungen.Value, "Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Blockierungen")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Blockierungen</rd:DefaultName>
+        <Top>4.33919cm</Top>
+        <Left>15.79147cm</Left>
+        <Height>0.67938cm</Height>
+        <Width>3.87584cm</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Wippe">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Wippe.Value, "Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Blockierungen")</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Wippe</rd:DefaultName>
+        <Top>5.36577cm</Top>
+        <Left>0.4721cm</Left>
+        <Height>0.6cm</Height>
+        <Width>5.22521cm</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Top</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Bezeichnung_Verstellhebel">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Bezeichnung_Verstellhebel.Value, "Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Blockierungen")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Bezeichnung_Verstellhebel</rd:DefaultName>
+        <Top>5.36577cm</Top>
+        <Left>5.76377cm</Left>
+        <Height>0.67938cm</Height>
+        <Width>13.90353cm</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Anzahl_Programm1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!Anzahl_Programm.Value, "Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Blockierungen") / 2</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Anzahl_Programm1</rd:DefaultName>
+        <Top>6.65694cm</Top>
+        <Left>1.68607cm</Left>
+        <Height>0.8cm</Height>
+        <Width>1.78874cm</Width>
+        <ZIndex>17</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Programm_doppelt1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Programm_doppelt.Value, "Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Blockierungen")</Value>
+                <Style>
+                  <FontFamily>3 of 9 Barcode</FontFamily>
+                  <FontSize>48pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Programm_doppelt1</rd:DefaultName>
+        <Top>6.28653cm</Top>
+        <Left>3.61592cm</Left>
+        <Height>1.55141cm</Height>
+        <Width>6.39485cm</Width>
+        <ZIndex>18</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Programm_doppelt2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Programm_einzeln.Value, "Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Blockierungen")</Value>
+                <Style>
+                  <FontFamily>3 of 9 Barcode</FontFamily>
+                  <FontSize>48pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Programm_doppelt1</rd:DefaultName>
+        <Top>6.28653cm</Top>
+        <Left>12.17078cm</Left>
+        <Height>1.55141cm</Height>
+        <Width>7.49652cm</Width>
+        <ZIndex>19</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Anzahl_Programm2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!Anzahl_Programm.Value, "Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Blockierungen") Mod 2</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Anzahl_Programm1</rd:DefaultName>
+        <Top>6.65694cm</Top>
+        <Left>10.21287cm</Left>
+        <Height>0.8cm</Height>
+        <Width>1.78152cm</Width>
+        <ZIndex>20</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Image Name="Image1">
+        <Source>Embedded</Source>
+        <Value>nok</Value>
+        <Sizing>FitProportional</Sizing>
+        <Top>6.65694cm</Top>
+        <Left>0.46328cm</Left>
+        <Height>0.8cm</Height>
+        <Width>0.89486cm</Width>
+        <ZIndex>21</ZIndex>
+        <Visibility>
+          <Hidden>=(First(Fields!Gurt_Gangseitig.Value, "Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Blockierungen") = "1")</Hidden>
+        </Visibility>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Image Name="imgOkNok">
+        <Source>Embedded</Source>
+        <Value>ok</Value>
+        <Sizing>FitProportional</Sizing>
+        <Top>6.65694cm</Top>
+        <Left>0.46328cm</Left>
+        <Height>0.8cm</Height>
+        <Width>0.89486cm</Width>
+        <ZIndex>22</ZIndex>
+        <Visibility>
+          <Hidden>=(First(Fields!Gurt_Gangseitig.Value, "Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Blockierungen") = "0")</Hidden>
+        </Visibility>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Rectangle Name="Rectangle1">
+        <ReportItems>
+          <Textbox Name="lblZusatzangaben">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Zusatzangaben:</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.15875cm</Top>
+            <Left>0.06738cm</Left>
+            <Height>0.65292cm</Height>
+            <Width>4.06987cm</Width>
+            <Visibility>
+              <Hidden>=IsNothing(First(Fields!BBNr.Value, "Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Zusatzangaben"))</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Tablix Name="dgZusatzangaben">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>9.17191cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>10.04093cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.70583cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox314">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Bezeichnung</Value>
+                                  <Style>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox315">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Menge</Value>
+                                  <Style>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.70583cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Bezeichnung3">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Bezeichnung.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Bezeichnung</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Menge4">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Menge.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Menge</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Details58" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Zusatzangaben</DataSetName>
+            <Top>0.92959cm</Top>
+            <Left>0.0762cm</Left>
+            <Height>1.41166cm</Height>
+            <Width>19.21284cm</Width>
+            <ZIndex>1</ZIndex>
+            <Visibility>
+              <Hidden>=IsNothing(First(Fields!BBNr.Value, "Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Zusatzangaben"))</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>8.88683cm</Top>
+        <Left>0.37826cm</Left>
+        <Height>2.5cm</Height>
+        <Width>19.62735cm</Width>
+        <ZIndex>23</ZIndex>
+        <Visibility>
+          <Hidden>=IsNothing(First(Fields!BBNr.Value, "Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Zusatzangaben"))</Hidden>
+        </Visibility>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+      <Rectangle Name="Rectangle2">
+        <ReportItems>
+          <Tablix Name="Tablix14">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>19.22167cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.70583cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Bezeichnung4">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Bemerkung.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Bezeichnung</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Details59" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>Seat2GetherReportsDataSet_T_Auftrag_Bemerkungen</DataSetName>
+            <Top>0.98149cm</Top>
+            <Left>0.06738cm</Left>
+            <Height>0.70583cm</Height>
+            <Width>19.22167cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Textbox Name="Textbox316">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Bemerkung</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>0.22275cm</Top>
+            <Left>0.0762cm</Left>
+            <Height>0.65292cm</Height>
+            <Width>4.06105cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>11.54853cm</Top>
+        <Left>0.37826cm</Left>
+        <Height>1.81208cm</Height>
+        <Width>19.62735cm</Width>
+        <ZIndex>24</ZIndex>
+        <Visibility>
+          <Hidden>=IsNothing(First(Fields!AuftragsNr.Value, "Seat2GetherReportsDataSet_T_Auftrag_Bemerkungen"))</Hidden>
+        </Visibility>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+    </ReportItems>
+    <Height>13.75061cm</Height>
+    <Style />
+  </Body>
+  <Width>20.25917cm</Width>
+  <Page>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>0.4cm</LeftMargin>
+    <RightMargin>0.4cm</RightMargin>
+    <TopMargin>0.4cm</TopMargin>
+    <BottomMargin>0.4cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <Author>Mehmet Tahir Dede</Author>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="Seat2GetherReportsDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>d473933c-72c7-4b0a-afb3-7e1a0afa762c</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Blockierungen">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BBNr">
+          <DataField>BBNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Spalte">
+          <DataField>Spalte</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Anzahl_Programm">
+          <DataField>Anzahl_Programm</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Programm_doppelt">
+          <DataField>Programm_doppelt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Programm_einzeln">
+          <DataField>Programm_einzeln</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Blockierungen">
+          <DataField>Blockierungen</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Gurt_Gangseitig">
+          <DataField>Gurt_Gangseitig</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Wippe">
+          <DataField>Wippe</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bezeichnung_Verstellhebel">
+          <DataField>Bezeichnung_Verstellhebel</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AuftragsNr">
+          <DataField>AuftragsNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Seite">
+          <DataField>Seite</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\mehdede\dev\Seat2Gether\backend\Seat2Gether\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>A_BBNr_Sesselblenden_Blockierungen</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>A_BBNr_Sesselblenden_BlockierungenTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Zusatzangaben">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BBNr">
+          <DataField>BBNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bezeichnung">
+          <DataField>Bezeichnung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="lfdNr_Merkmal">
+          <DataField>lfdNr_Merkmal</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\mehdede\dev\Seat2Gether\backend\Seat2Gether\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>A_BBNr_Sesselblenden_Zusatzangaben</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>A_BBNr_Sesselblenden_ZusatzangabenTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_T_Auftrag_Bemerkungen">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="AuftragsNr">
+          <DataField>AuftragsNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bemerkung">
+          <DataField>Bemerkung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Zuschnitt">
+          <DataField>Zuschnitt</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Näherei">
+          <DataField>Näherei</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Sonderstuhl">
+          <DataField>Sonderstuhl</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Montage">
+          <DataField>Montage</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Sesselblenden">
+          <DataField>Sesselblenden</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\mehdede\dev\Seat2Gether\backend\Seat2Gether\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>T_Auftrag_Bemerkungen</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>T_Auftrag_BemerkungenTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="nok">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="ok">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHgAeQMBIgACEQEDEQH/xAAbAAEAAQUBAAAAAAAAAAAAAAAABQECBAYHA//EADkQAAEDAgQEAwQJAwUAAAAAAAEAAgMEEQUSMUEGIVFhE3GxFFJigRUiMjNTkaHR8EPB4SMlQmNz/8QAGgEAAgMBAQAAAAAAAAAAAAAAAAUCAwQGAf/EACMRAAICAgIBBQEBAAAAAAAAAAACAQMEERIxIRMyQVFhIiP/2gAMAwEAAhEDEQA/AO4oiIAIiIAIiIAIiIAIiIAKjjYXKHRarxbiw8GajhlLGNbaokbrc6MHc79B5qq21al5SV22RWvKSK4k4ymdO+mwdwbGw2dPa5cfh7d1rLcYxYSeIMRq8/8A6m35aLHEenJXCNIrMix23sQ2ZFjtvZuvC3FstRUx0GKlpfJyinAtmPRw691uy4zTwvfW0bIwfEdOwtt2IJP6Lrf+r3TbDsayv+hvhWNZX/RmIiLYawiIgAiIgAiIgAqFVWPW1UVHTSVEzsrGC5/ZeTOvMnkzowcexI0VOI4SPaZbiO+jRu49h+y51XzePJlYXGJhNi7V5Orj3KksYrZqiWR0vKaW2cX+7Zswep7lRYYkOVkTa/jqBJl5E2NqOjwEavEbGxvlmOWKMXcfQDuVkwwOlkDGC5KlOHcLGM1zZbf7bSP+p/3ybv8ALYfn0UMembX0VY9M2tr4JHgzAnBxxSujtNILRRn+m3YefXutxyjojGhjQ1oAAFgFcugRIReMD9EhF4wERFIkEREAEREAERUKABK07iHE/aZz4ZvBA8iP
+pJKNXeTfXyUvxFiBhiFJBJkmlBLnj+mwau89h38lp8tnuGQZWNGVjegSvPyNf5qLs2/jHCDFLS4lzuZPMlVDF7hiue8UkAnyeJK52SCL8STb5DUpWqy06gVIss2oKR0klXUswqmuJpgHVUgPOKM6N83ei6Hh9HFQ0kdPA0NYwWAAsovhXBzhlGZKh3iVk58SaQjm5x1U6ugxqYqTXyP8emKk0ERFoLwi85po4I3STPaxjRdznGwAUQ/ijDWus0zvb77IXEenP5KD2InunRBrET3Tom0WPR1tPWwiWllbKw8rtOh6HoV73UomJ8wSiYnzBVERenoWPXVcdFSyVE32WC9hqTsB3Oi9yVqmN1vtVWWsN4KZxDfjl3Pk31v0VGRdFScpKrrYrTkRlZLJLLI+b76V2aX4ejR2HrdY+RepF9dVUALnWaWncnPO0u25LI4g4/WIaxozOcdGgalZ3C1D9K130tO0imjHh0cbtme95u18rLBfTPxOtZg0H2OT61w2btH89T281v8ATQMp4WRRizWiwATbAx9R6jDXCx9Rzk9AFVETMYhERAGk43WOxGuezMfZoHlrGbOcORcfI8gsLKr6+N2H4pNSzjL4sj5IHHSRpJcQO4voqXXN5MvNk8zncjlNk8y2EzUs/tFDL4U++7X9nDcfqtrwTHIcSvDI3waxgu+Em9x1adx/CtVuvOVgeWOa50crHZo5GGzmHqF7j5T0T9qTx8pqZ+1Oi3VVAcPY57aRSVuVlYwX5cmyjq3+428lOPe1rHPcQGgXJOyf12LYvJZ8DxLFdeS9Ebj1c6mp2wwutUT3aw+6N3fIfqR1WqOLQA1gIY0WaF7YhWuqp31BuPFFmA/8Y9vz1/JYeZI8y/1X8dQJsy/1H1HRfdUnqfY6Y1AZnlc7w6eP8SQ6fIalUiaZZAwG19Sdh1WbwxRjGMS+k3tPsVODHSNO43f8/RRxaPVf8I4tPqP+E5wrhH0ZQh0xz1MxMk0h1c46
+qcVALKq6GI1GoHsRqNQERF6ehERAGFieG02KUrqesiD2HmDoWnYg7FaRX0lVgs7Ya1xlpnm0NXa1z7r+ju+hXRF4VdNDV076epjbJFILOY4XBCz5GOty+ezPfjrcvns5/mVM3NXYxhk+BThr3OloJDaGd3Mxn3H/ANj/AA4pekNtTVNxYR21NW3Fj1lGcAh5Y9pzMkb9pjhoQpV3ELq+g9gqRkqW86kgWa+MaFp+I8rbc1CGRWmS/wAkV3PXuF6k9quevcL1JkyTF7y92p5qzOscyK5k0cUb6mbnFEL5d3O2aPMqERudQVxEzJkPhlq5YsJp7iaqGaocD91F083el10OgpI6Kljp4WhrGNAACgeDcKkp4JK+tANZVnO8+6NgOwWzLoMamKk18j/HpitP0IiLSaAiIgAiIgAiIgDxqqeKqgkgqI2yRSNLXtcLghc6xzCpcDqAwudJRym0EpPNvwO79DuulrGr6KCvpJKWqYHxSCxB9R3WfIoW5dT2UZFC3LqezlhkVpk7q7GsPnwaudSzkvafrRS/iN/cbqPMqQOko3FhA6SjcWMwSZnBo5k6BS2AYecXxVkZ50dE7M87SS/4/migIHSPkZHTi9RK7JFy0J1PyF11Xh3Co8Iw2OnjHO13Hcndb8Cjk3Ofg3YNHKec/BJMaGgACwHIK5ETgcBERABERABERABERABERAEbjuD02M0Rp6m4IOaORv2mO6hc3r+EsapZzHHT+0x3+rJG4AHzB0RFRbj12+6Ci3Hrt90Gy8G8KTUM3t2J5TUWsxgNwwfz0W6BVRWIiovFSxEVF0oREUyYREQAREQAREQB/9k=</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>5ade54c4-b03f-450f-86f0-8ab60d093084</rd:ReportID>
+</Report>

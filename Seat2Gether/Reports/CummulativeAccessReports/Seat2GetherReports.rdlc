@@ -1,0 +1,2284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="dgSubreports">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>21cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>1.31479cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Subreport Name="SubreportCut">
+                      <ReportName>SubreportCut</ReportName>
+                      <KeepTogether>true</KeepTogether>
+                      <Visibility>
+                        <Hidden>=(Fields!IsCutReportVisible.Value = "false")</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Subreport>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.1cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="rctglCutReport">
+                      <PageBreak>
+                        <BreakLocation>End</BreakLocation>
+                      </PageBreak>
+                      <KeepTogether>true</KeepTogether>
+                      <Visibility>
+                        <Hidden>=(Fields!IsCutReportVisible.Value = "false") Or (
+(Fields!IsGesslerReportVisible.Value = "false") And
+(Fields!IsMontageReportVisible.Value = "false") And
+(Fields!IsSpecialChairReportVisible.Value = "false") And
+(Fields!IsStitchingReportVisible.Value = "false") And
+(Fields!IsChairDazzleReportVisible.Value = "false") And
+(Fields!IsStitchingCurtainReportVisible.Value = "false")
+)</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>1.5cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Subreport Name="SubReportGessler">
+                      <ReportName>SubReportGessler</ReportName>
+                      <KeepTogether>true</KeepTogether>
+                      <Visibility>
+                        <Hidden>=(Fields!IsGesslerReportVisible.Value = "false")</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Subreport>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.1cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="rctglGesslerReport">
+                      <PageBreak>
+                        <BreakLocation>End</BreakLocation>
+                      </PageBreak>
+                      <KeepTogether>true</KeepTogether>
+                      <Visibility>
+                        <Hidden>=(Fields!IsGesslerReportVisible.Value = "false") Or (
+(Fields!IsMontageReportVisible.Value = "false") And
+(Fields!IsSpecialChairReportVisible.Value = "false") And
+(Fields!IsStitchingReportVisible.Value = "false") And
+(Fields!IsChairDazzleReportVisible.Value = "false") And
+(Fields!IsStitchingCurtainReportVisible.Value = "false")
+)</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>1.5cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Subreport Name="SubReportStitching1">
+                      <ReportName>SubReportStitching1</ReportName>
+                      <KeepTogether>true</KeepTogether>
+                      <ZIndex>2</ZIndex>
+                      <Visibility>
+                        <Hidden>=(Fields!IsStitchingReportVisible.Value = "false")</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Subreport>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.1cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="rctglStitchingReport1">
+                      <PageBreak>
+                        <BreakLocation>End</BreakLocation>
+                      </PageBreak>
+                      <KeepTogether>true</KeepTogether>
+                      <Visibility>
+                        <Hidden>=(Fields!IsStitchingReportVisible.Value = "false") Or (
+(Fields!IsMontageReportVisible.Value = "false") And
+(Fields!IsSpecialChairReportVisible.Value = "false") And
+(Fields!IsChairDazzleReportVisible.Value = "false") And
+(Fields!IsStitchingCurtainReportVisible.Value = "false")
+)</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>1.5cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Subreport Name="SubReportStitching2">
+                      <ReportName>SubReportStitching2</ReportName>
+                      <KeepTogether>true</KeepTogether>
+                      <ZIndex>3</ZIndex>
+                      <Visibility>
+                        <Hidden>=(Fields!IsStitchingReportVisible.Value = "false")</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Subreport>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.1cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="rctglStitchingReport2">
+                      <PageBreak>
+                        <BreakLocation>End</BreakLocation>
+                      </PageBreak>
+                      <KeepTogether>true</KeepTogether>
+                      <Visibility>
+                        <Hidden>=(Fields!IsStitchingReportVisible.Value = "false") Or (
+(Fields!IsMontageReportVisible.Value = "false") And
+(Fields!IsSpecialChairReportVisible.Value = "false") And
+(Fields!IsChairDazzleReportVisible.Value = "false") And
+(Fields!IsStitchingCurtainReportVisible.Value = "false")
+)</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>1.5cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Subreport Name="SubReportMontage">
+                      <ReportName>SubReportMontage</ReportName>
+                      <KeepTogether>true</KeepTogether>
+                      <ZIndex>4</ZIndex>
+                      <Visibility>
+                        <Hidden>=(Fields!IsMontageReportVisible.Value = "false")</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Subreport>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.1cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="rctglMontageReport">
+                      <PageBreak>
+                        <BreakLocation>End</BreakLocation>
+                      </PageBreak>
+                      <KeepTogether>true</KeepTogether>
+                      <Visibility>
+                        <Hidden>=(Fields!IsMontageReportVisible.Value = "false") Or (
+(Fields!IsSpecialChairReportVisible.Value = "false") And
+(Fields!IsChairDazzleReportVisible.Value = "false") And
+(Fields!IsStitchingCurtainReportVisible.Value = "false")
+)</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>1.5cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Subreport Name="SubReportMontageFond">
+                      <ReportName>SubReportMontageFond</ReportName>
+                      <KeepTogether>true</KeepTogether>
+                      <ZIndex>5</ZIndex>
+                      <Visibility>
+                        <Hidden>=(Fields!IsMontageReportVisible.Value = "false")</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Subreport>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.1cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="rctglMontageFondReport">
+                      <PageBreak>
+                        <BreakLocation>End</BreakLocation>
+                      </PageBreak>
+                      <KeepTogether>true</KeepTogether>
+                      <Visibility>
+                        <Hidden>=(Fields!IsMontageReportVisible.Value = "false") Or (
+(Fields!IsSpecialChairReportVisible.Value = "false") And
+(Fields!IsChairDazzleReportVisible.Value = "false") And
+(Fields!IsStitchingCurtainReportVisible.Value = "false")
+)</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>1.5cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Subreport Name="SubReportSpecialChair">
+                      <ReportName>SubReportSpecialChair</ReportName>
+                      <KeepTogether>true</KeepTogether>
+                      <ZIndex>6</ZIndex>
+                      <Visibility>
+                        <Hidden>=(Fields!IsSpecialChairReportVisible.Value = "false")</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Subreport>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.1cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="rctglSpecialChair">
+                      <PageBreak>
+                        <BreakLocation>End</BreakLocation>
+                      </PageBreak>
+                      <KeepTogether>true</KeepTogether>
+                      <Visibility>
+                        <Hidden>=(Fields!IsSpecialChairReportVisible.Value = "false") Or (
+(Fields!IsChairDazzleReportVisible.Value = "false") And
+(Fields!IsStitchingCurtainReportVisible.Value = "false")
+)</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>1.5cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Subreport Name="SubReportChairDazzle1">
+                      <ReportName>SubReportChairDazzle1</ReportName>
+                      <KeepTogether>true</KeepTogether>
+                      <ZIndex>7</ZIndex>
+                      <Visibility>
+                        <Hidden>=(Fields!IsChairDazzleReportVisible.Value = "false")</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Subreport>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.1cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="rctglChairDazzleReport1">
+                      <PageBreak>
+                        <BreakLocation>End</BreakLocation>
+                      </PageBreak>
+                      <KeepTogether>true</KeepTogether>
+                      <Visibility>
+                        <Hidden>=(Fields!IsChairDazzleReportVisible.Value = "false") Or (
+(Fields!IsStitchingCurtainReportVisible.Value = "false")
+)</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>1.5cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Subreport Name="SubReportChairDazzle2">
+                      <ReportName>SubReportChairDazzle2</ReportName>
+                      <KeepTogether>true</KeepTogether>
+                      <ZIndex>8</ZIndex>
+                      <Visibility>
+                        <Hidden>=(Fields!IsChairDazzleReportVisible.Value = "false")</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Subreport>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.1cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="rctglChairDazzleReport2">
+                      <PageBreak>
+                        <BreakLocation>End</BreakLocation>
+                      </PageBreak>
+                      <KeepTogether>true</KeepTogether>
+                      <Visibility>
+                        <Hidden>=(Fields!IsChairDazzleReportVisible.Value = "false") Or (
+(Fields!IsStitchingCurtainReportVisible.Value = "false")
+)</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>1.5cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Subreport Name="SubReportStitchingCurtain">
+                      <ReportName>SubReportStitchingCurtain</ReportName>
+                      <KeepTogether>true</KeepTogether>
+                      <ZIndex>9</ZIndex>
+                      <Visibility>
+                        <Hidden>=(Fields!IsStitchingCurtainReportVisible.Value = "false")</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Subreport>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Details">
+                <PageBreak>
+                  <BreakLocation>End</BreakLocation>
+                </PageBreak>
+              </Group>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>Seat2GetherReportsDataSet_ReportsVisibility</DataSetName>
+        <PageBreak>
+          <BreakLocation>End</BreakLocation>
+        </PageBreak>
+        <Height>15.71479cm</Height>
+        <Width>21cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+    </ReportItems>
+    <Height>15.98146cm</Height>
+    <Style />
+  </Body>
+  <Width>21cm</Width>
+  <Page>
+    <PageFooter>
+      <Height>1.05833cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="ExecutionTime">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!ExecutionTime</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>ExecutionTime</rd:DefaultName>
+          <Top>0.26092cm</Top>
+          <Left>0.31768cm</Left>
+          <Height>0.6cm</Height>
+          <Width>7.03256cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="PageNumber">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!PageNumber</Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value>/</Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value>=Globals!TotalPages</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>PageNumber</rd:DefaultName>
+          <Top>0.26092cm</Top>
+          <Left>14.65091cm</Left>
+          <Height>0.6cm</Height>
+          <Width>6.00203cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>0cm</LeftMargin>
+    <RightMargin>0cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="Seat2GetherReportsDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>25c4f41f-020a-44d0-8ecd-b070833134b1</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Seat2GetherReportsDataSet_A_BBNR">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BBNr">
+          <DataField>BBNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AuftragsNr">
+          <DataField>AuftragsNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Anzahl_links">
+          <DataField>Anzahl_links</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Anzahl_rechts">
+          <DataField>Anzahl_rechts</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Anzahl_Fond">
+          <DataField>Anzahl_Fond</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Anzahl_Clubecke">
+          <DataField>Anzahl_Clubecke</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Stuhltyp">
+          <DataField>Stuhltyp</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Soll_Termin">
+          <DataField>Soll_Termin</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Reihenfolge">
+          <DataField>Reihenfolge</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Ist_Termin">
+          <DataField>Ist_Termin</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="angelegt_am">
+          <DataField>angelegt_am</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="angelegt_von">
+          <DataField>angelegt_von</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="lfdNr_Status">
+          <DataField>lfdNr_Status</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Status_gesetzt_am">
+          <DataField>Status_gesetzt_am</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="BBNr_Farbe_Bezug">
+          <DataField>BBNr_Farbe_Bezug</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BBNr_Farbe_Lederkopfteil">
+          <DataField>BBNr_Farbe_Lederkopfteil</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Länderkennzeichen">
+          <DataField>Länderkennzeichen</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Kunde">
+          <DataField>Kunde</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="intern">
+          <DataField>intern</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Anzahl_UD_links">
+          <DataField>Anzahl_UD_links</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Anzahl_UD_rechts">
+          <DataField>Anzahl_UD_rechts</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Werk">
+          <DataField>Werk</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sitzeinteilung">
+          <DataField>Sitzeinteilung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Belegung">
+          <DataField>Belegung</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Ansprechpartner_Vertrieb">
+          <DataField>Ansprechpartner_Vertrieb</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ansprechpartner_AZ">
+          <DataField>Ansprechpartner_AZ</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EU_Richtilinie">
+          <DataField>EU_Richtilinie</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Abnahme">
+          <DataField>Abnahme</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Baumuster">
+          <DataField>Baumuster</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Maktx">
+          <DataField>Maktx</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FZG_pro_AuftragsNr">
+          <DataField>FZG_pro_AuftragsNr</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BBNr_Min">
+          <DataField>BBNr_Min</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BBNr_Max">
+          <DataField>BBNr_Max</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Steuern_nach">
+          <DataField>Steuern_nach</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Jahr">
+          <DataField>Jahr</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Anzahl_Lose">
+          <DataField>Anzahl_Lose</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>A_BBNR</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>A_BBNRTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_Stammdaten">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BBNr">
+          <DataField>BBNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AuftragsNr">
+          <DataField>AuftragsNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Stuhltyp">
+          <DataField>Stuhltyp</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Soll_Termin">
+          <DataField>Soll_Termin</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Reihenfolge">
+          <DataField>Reihenfolge</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Ist_Termin">
+          <DataField>Ist_Termin</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="angelegt_am">
+          <DataField>angelegt_am</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="angelegt_von">
+          <DataField>angelegt_von</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="lfdNr_Status">
+          <DataField>lfdNr_Status</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Status_gesetzt_am">
+          <DataField>Status_gesetzt_am</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="BBNr_Farbe_Bezug">
+          <DataField>BBNr_Farbe_Bezug</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BBNr_Farbe_Lederkopfteil">
+          <DataField>BBNr_Farbe_Lederkopfteil</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Länderkennzeichen">
+          <DataField>Länderkennzeichen</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Kunde">
+          <DataField>Kunde</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="intern">
+          <DataField>intern</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Werk">
+          <DataField>Werk</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sitzeinteilung">
+          <DataField>Sitzeinteilung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Belegung">
+          <DataField>Belegung</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Ansprechpartner_Vertrieb">
+          <DataField>Ansprechpartner_Vertrieb</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ansprechpartner_AZ">
+          <DataField>Ansprechpartner_AZ</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EU_Richtilinie">
+          <DataField>EU_Richtilinie</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Abnahme">
+          <DataField>Abnahme</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Baumuster">
+          <DataField>Baumuster</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Maktx">
+          <DataField>Maktx</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Anz_li">
+          <DataField>Anz_li</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Anz_re">
+          <DataField>Anz_re</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Anz_Fo">
+          <DataField>Anz_Fo</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ANz_Stuhl">
+          <DataField>ANz_Stuhl</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="RB">
+          <DataField>RB</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_Stammdaten</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_StammdatenTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_T_ST_Variante_Stoffangabe">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="lfdNr_Variante_Stoffangabe">
+          <DataField>lfdNr_Variante_Stoffangabe</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="AuftragsNr">
+          <DataField>AuftragsNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bezeichnung">
+          <DataField>Bezeichnung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="angelegt_am">
+          <DataField>angelegt_am</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="angelegt_von">
+          <DataField>angelegt_von</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Rücken">
+          <DataField>Rücken</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Kopfteil">
+          <DataField>Kopfteil</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Keder">
+          <DataField>Keder</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tasche_Kopflatz">
+          <DataField>Tasche_Kopflatz</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>T_ST_Variante_Stoffangabe</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>T_ST_Variante_StoffangabeTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_23">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Auftragsnummer">
+          <DataField>Auftragsnummer</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bezeichnung">
+          <DataField>Bezeichnung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_23</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_23TableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_TGR_Zuschnitt_BA_TG">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BBNr">
+          <DataField>BBNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UGR">
+          <DataField>UGR</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Bezeichnung">
+          <DataField>Bezeichnung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_TGR_Zuschnitt_BA_TG</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_TGR_Zuschnitt_BA_TGTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_Anbauteile_Zuschnitt">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Bezeichnung_Bericht">
+          <DataField>Bezeichnung_Bericht</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_Anbauteile_Zuschnitt</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_Anbauteile_ZuschnittTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_Anbauteile_Zuschnitt_Rücken">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Bezeichnung_Bericht">
+          <DataField>Bezeichnung_Bericht</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_Anbauteile_Zuschnitt_Rücken</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_Anbauteile_Zuschnitt_RückenTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_Fahrernebenstuhl">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="AuftragsNr">
+          <DataField>AuftragsNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bemerkungen">
+          <DataField>Bemerkungen</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bezug">
+          <DataField>Bezug</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="keder">
+          <DataField>keder</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="kopfteil">
+          <DataField>kopfteil</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_Fahrernebenstuhl</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_FahrernebenstuhlTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_Diverses">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="AUftragsNr">
+          <DataField>AUftragsNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Seitenwand">
+          <DataField>Seitenwand</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Vorhang">
+          <DataField>Vorhang</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Gepäckablage">
+          <DataField>Gepäckablage</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Innendecke">
+          <DataField>Innendecke</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dekorstreifen">
+          <DataField>Dekorstreifen</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_Diverses</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_DiversesTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_KSW_Zuschnitt">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="AuftragsNr">
+          <DataField>AuftragsNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="KSW_Mitteilung">
+          <DataField>KSW_Mitteilung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_KSW_Zuschnitt</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_KSW_ZuschnittTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_A_BBNR_Bemerkungen_Zuschnitt">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BBNr">
+          <DataField>BBNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bemerkung">
+          <DataField>Bemerkung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\mehdede\dev\Seat2Gether\backend\Seat2Gether\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>A_BBnr_Bemerkungen_Zuschnitt</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>A_BBnr_Bemerkungen_ZuschnittTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_Divers_98">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Auftragsnummer">
+          <DataField>Auftragsnummer</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bezeichnung">
+          <DataField>Bezeichnung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_Divers_98</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_Divers_98TableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_43">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Auftragsnummer">
+          <DataField>Auftragsnummer</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bezeichnung">
+          <DataField>Bezeichnung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_43</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_43TableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_49">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Auftragsnummer">
+          <DataField>Auftragsnummer</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="lfdNr_Merkmal">
+          <DataField>lfdNr_Merkmal</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Spalte_SSFNS">
+          <DataField>Spalte_SSFNS</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Ausgabe_SSFNS">
+          <DataField>Ausgabe_SSFNS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Bezeichnung_Bericht">
+          <DataField>Bezeichnung_Bericht</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_49</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_49TableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_A_BBNR_Gessler_gruppiert">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BBNr">
+          <DataField>BBNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR_Gessler">
+          <DataField>TNR_Gessler</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bestellung">
+          <DataField>Bestellung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bezeichnung">
+          <DataField>Bezeichnung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ID_Gruppe">
+          <DataField>ID_Gruppe</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Gruppe">
+          <DataField>Gruppe</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sortierung">
+          <DataField>Sortierung</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Soll_Termin">
+          <DataField>Soll_Termin</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="AuftragsNr">
+          <DataField>AuftragsNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>A_BBNR_Gessler_gruppiert</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>A_BBNR_Gessler_gruppiertTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_A_BBNr_Anzahl_Rücken">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BBNr">
+          <DataField>BBNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Stuhltyp">
+          <DataField>Stuhltyp</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="was">
+          <DataField>was</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Anzahl">
+          <DataField>Anzahl</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>A_BBNr_Anzahl_Rücken</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>A_BBNr_Anzahl_RückenTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_Anbauteile_Zuschnitt_Kissen">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Bezeichnung_Bericht">
+          <DataField>Bezeichnung_Bericht</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_Anbauteile_Zuschnitt_Kissen</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_Anbauteile_Zuschnitt_KissenTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_Fahrernebenstuhl_Stückliste">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="AuftragsNr">
+          <DataField>AuftragsNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bezeichnung">
+          <DataField>Bezeichnung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Farbe">
+          <DataField>Farbe</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_Fahrernebenstuhl_Stückliste</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_Fahrernebenstuhl_StücklisteTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_TGR_Vorhang">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bezeichnung">
+          <DataField>Bezeichnung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bezeichnung_Bericht">
+          <DataField>Bezeichnung_Bericht</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_TGR_Vorhang</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_TGR_VorhangTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_KSW_Näherei">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="AuftragsNr">
+          <DataField>AuftragsNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="KSW_Mitteilung">
+          <DataField>KSW_Mitteilung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_KSW_Näherei</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_KSW_NähereiTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_A_BBnr_Bemerkungen_Näherei">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BBNr">
+          <DataField>BBNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bemerkung">
+          <DataField>Bemerkung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>A_BBnr_Bemerkungen_Näherei</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>A_BBnr_Bemerkungen_NähereiTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_Fahrerstuhl">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="AuftragsNr">
+          <DataField>AuftragsNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Hersteller">
+          <DataField>Hersteller</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bemerkungen">
+          <DataField>Bemerkungen</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bezug">
+          <DataField>Bezug</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ausführung">
+          <DataField>Ausführung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Keder">
+          <DataField>Keder</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Kopfteil">
+          <DataField>Kopfteil</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_Fahrerstuhl</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_FahrerstuhlTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_Fahrerstuhl_Stückliste">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="AuftragsNr">
+          <DataField>AuftragsNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bezeichnung">
+          <DataField>Bezeichnung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Farbe">
+          <DataField>Farbe</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="lfdNr_Merkmal">
+          <DataField>lfdNr_Merkmal</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_Fahrerstuhl_Stückliste</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_Fahrerstuhl_StücklisteTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_Anbauteile_MOntage_NONFondNoDeck">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Bezeichnung_Bericht">
+          <DataField>Bezeichnung_Bericht</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Merkmal">
+          <DataField>Merkmal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Deck">
+          <DataField>Deck</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_Anbauteile_MOntage_NONFond</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_Anbauteile_MOntage_NONFondTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_Anbauteile_MOntage_NONFondOD">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Bezeichnung_Bericht">
+          <DataField>Bezeichnung_Bericht</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Merkmal">
+          <DataField>Merkmal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Deck">
+          <DataField>Deck</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_Anbauteile_MOntage_NONFond</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_Anbauteile_MOntage_NONFondTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_Anbauteile_MOntage_NONFondUD">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Bezeichnung_Bericht">
+          <DataField>Bezeichnung_Bericht</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Merkmal">
+          <DataField>Merkmal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Deck">
+          <DataField>Deck</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_Anbauteile_MOntage_NONFond</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_Anbauteile_MOntage_NONFondTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_KSW_Montage">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="AuftragsNr">
+          <DataField>AuftragsNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="KSW_Mitteilung">
+          <DataField>KSW_Mitteilung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_KSW_Montage</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_KSW_MontageTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_KSW_Sonderstuhl">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="AuftragsNr">
+          <DataField>AuftragsNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="KSW_Mitteilung">
+          <DataField>KSW_Mitteilung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_KSW_Sonderstuhl</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_KSW_SonderstuhlTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_Schiebestuhl_44">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Auftragsnummer">
+          <DataField>Auftragsnummer</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bezeichnung">
+          <DataField>Bezeichnung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_Schiebestuhl_44</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_Schiebestuhl_44TableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_A_BBnr_Bemerkungen_Montage">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BBNr">
+          <DataField>BBNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bemerkung">
+          <DataField>Bemerkung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>A_BBnr_Bemerkungen_Montage</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>A_BBnr_Bemerkungen_MontageTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_Anbauteile_MOntage_Fond">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Bezeichnung_Bericht">
+          <DataField>Bezeichnung_Bericht</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Merkmal">
+          <DataField>Merkmal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_Anbauteile_MOntage_Fond</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_Anbauteile_MOntage_FondTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_Anbauteile_MOntage_FondOD">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Bezeichnung_Bericht">
+          <DataField>Bezeichnung_Bericht</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Merkmal">
+          <DataField>Merkmal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_Anbauteile_MOntage_Fond</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_Anbauteile_MOntage_FondTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_Anbauteile_MOntage_FondUD">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Bezeichnung_Bericht">
+          <DataField>Bezeichnung_Bericht</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Merkmal">
+          <DataField>Merkmal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_Anbauteile_MOntage_Fond</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_Anbauteile_MOntage_FondTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_UA_Kinostuhl_45">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Auftragsnummer">
+          <DataField>Auftragsnummer</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bezeichnung">
+          <DataField>Bezeichnung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_UA_Kinostuhl_45</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_UA_Kinostuhl_45TableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_A_BBnr_Bemerkungen_Sonderstuhl">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BBNr">
+          <DataField>BBNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bemerkung">
+          <DataField>Bemerkung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>A_BBnr_Bemerkungen_Sonderstuhl</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>A_BBnr_Bemerkungen_SonderstuhlTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_SP_BBNR_TGR_Zunschnitt_BA_TG">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BBNr">
+          <DataField>BBNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TNR">
+          <DataField>TNR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UGR">
+          <DataField>UGR</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Bezeichnung">
+          <DataField>Bezeichnung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sp_BBNR_TGR_Zuschnitt_BA_TG</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sp_BBNR_TGR_Zuschnitt_BA_TGTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Blockierungen">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BBNr">
+          <DataField>BBNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Spalte">
+          <DataField>Spalte</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Anzahl_Programm">
+          <DataField>Anzahl_Programm</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Programm_doppelt">
+          <DataField>Programm_doppelt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Programm_einzeln">
+          <DataField>Programm_einzeln</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Blockierungen">
+          <DataField>Blockierungen</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Gurt_Gangseitig">
+          <DataField>Gurt_Gangseitig</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Wippe">
+          <DataField>Wippe</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bezeichnung_Verstellhebel">
+          <DataField>Bezeichnung_Verstellhebel</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AuftragsNr">
+          <DataField>AuftragsNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Seite">
+          <DataField>Seite</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>A_BBNr_Sesselblenden_Blockierungen</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>A_BBNr_Sesselblenden_BlockierungenTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_A_BBNr_Sesselblenden_Zusatzangaben">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BBNr">
+          <DataField>BBNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bezeichnung">
+          <DataField>Bezeichnung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Menge">
+          <DataField>Menge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="lfdNr_Merkmal">
+          <DataField>lfdNr_Merkmal</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>A_BBNr_Sesselblenden_Zusatzangaben</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>A_BBNr_Sesselblenden_ZusatzangabenTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_T_Auftrag_Bemerkungen">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="AuftragsNr">
+          <DataField>AuftragsNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bemerkung">
+          <DataField>Bemerkung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Zuschnitt">
+          <DataField>Zuschnitt</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Näherei">
+          <DataField>Näherei</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Sonderstuhl">
+          <DataField>Sonderstuhl</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Montage">
+          <DataField>Montage</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Sesselblenden">
+          <DataField>Sesselblenden</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>T_Auftrag_Bemerkungen</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>T_Auftrag_BemerkungenTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_A_BBNr_Gurtschloss_Wandseitig">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BBNr">
+          <DataField>BBNr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Programm">
+          <DataField>Programm</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Anzahl_Gurt_Wandseitig">
+          <DataField>Anzahl_Gurt_Wandseitig</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Spalte">
+          <DataField>Spalte</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EB">
+          <DataField>EB</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Bezeichnung">
+          <DataField>Bezeichnung</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Deck">
+          <DataField>Deck</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>T:\Projects\Seat2Gether\dev\Seat2Gether\backend\Seat2Gether\Reports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>A_BBNr_Gurtschloss_Wandseitig</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>A_BBNr_Gurtschloss_WandseitigTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Seat2GetherReportsDataSet_ReportsVisibility">
+      <Query>
+        <DataSourceName>Seat2GetherReportsDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="IsCutReportVisible">
+          <DataField>IsCutReportVisible</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IsGesslerReportVisible">
+          <DataField>IsGesslerReportVisible</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IsMontageReportVisible">
+          <DataField>IsMontageReportVisible</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IsSpecialChairReportVisible">
+          <DataField>IsSpecialChairReportVisible</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IsStitchingReportVisible">
+          <DataField>IsStitchingReportVisible</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IsChairDazzleReportVisible">
+          <DataField>IsChairDazzleReportVisible</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IsStitchingCurtainReportVisible">
+          <DataField>IsStitchingCurtainReportVisible</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Seat2GetherReportsDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\mehdede\dev\Seat2Gether\backend\Seat2Gether\Seat2Gether\Reports\CummulativeAccessReports\Seat2GetherReportsDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>ReportsVisibilityTableAdapter</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>7af44b2e-84ab-4dab-9fa0-433cd6a28798</rd:ReportID>
+</Report>

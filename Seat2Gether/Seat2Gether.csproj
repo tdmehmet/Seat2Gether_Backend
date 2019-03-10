@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8AAB54A9-A389-4815-90F1-2D24BA6B194A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Seat2Gether</RootNamespace>
+    <AssemblyName>Seat2Gether</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\SwaggerConfig.cs" />
+    <Compile Include="Controllers\ExternalControllers\MasterDataSeatTypeController.cs" />
+    <Compile Include="Controllers\ExternalControllers\MasterDataController.cs" />
+    <Compile Include="Controllers\ExternalControllers\MasterDataSeatFabricTypeController.cs" />
+    <Compile Include="Controllers\ExternalControllers\ImportDataController.cs" />
+    <Compile Include="Controllers\ExternalControllers\MaterialController.cs" />
+    <Compile Include="Controllers\ExternalControllers\SeatController.cs" />
+    <Compile Include="Controllers\ExternalControllers\StationController.cs" />
+    <Compile Include="Controllers\ExternalControllers\VehicleController.cs" />
+    <Compile Include="Controllers\ExternalControllers\WarehouseController.cs" />
+    <Compile Include="Controllers\MasterDataSeatFrameController.cs" />
+    <Compile Include="Controllers\MasterDataSupportTubesController.cs" />
+    <Compile Include="Controllers\OrderWorkingUnitReportCommentController.cs" />
+    <Compile Include="Controllers\OrderStatusInfoController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\MasterDataAdditionalDisclosureController.cs" />
+    <Compile Include="Controllers\MasterDataAdjustingLeverController.cs" />
+    <Compile Include="Controllers\MasterDataBackrestAdjusterController.cs" />
+    <Compile Include="Controllers\MasterDataChairFootController.cs" />
+    <Compile Include="Controllers\MasterDataChairTypeController.cs" />
+    <Compile Include="Controllers\MasterdataColourController.cs" />
+    <Compile Include="Controllers\MasterDataEBBeltController.cs" />
+    <Compile Include="Controllers\MasterDataLateralAdjustmentController.cs" />
+    <Compile Include="Controllers\MasterDataMaterialController.cs" />
+    <Compile Include="Controllers\MasterDataMaterialMasterController.cs" />
+    <Compile Include="Controllers\MasterDataRearSeatPanController.cs" />
+    <Compile Include="Controllers\MasterDataRemarkController.cs" />
+    <Compile Include="Controllers\MasterDataSideCoverController.cs" />
+    <Compile Include="Controllers\MasterDataStatusController.cs" />
+    <Compile Include="Controllers\MasterDataStCharacteristicController.cs" />
+    <Compile Include="Controllers\MasterDataSTMaterialMasterController.cs" />
+    <Compile Include="Controllers\MasterDataVehicleBackRowPillowController.cs" />
+    <Compile Include="Controllers\MasterDataVehicleController.cs" />
+    <Compile Include="Controllers\MasterDataVehicleHandHolderDecorateController.cs" />
+    <Compile Include="Controllers\MasterDataVehicleHolderAssemblyTypeController.cs" />
+    <Compile Include="Controllers\MasterDataVehicleMaterialController.cs" />
+    <Compile Include="Controllers\MasterDataVehicleModelController.cs" />
+    <Compile Include="Controllers\MasterDataVehiclePillowController.cs" />
+    <Compile Include="Controllers\MasterDataVehicleSeatFabricController.cs" />
+    <Compile Include="Controllers\MasterDataVehicleSeatHeaderFastenerTypeController.cs" />
+    <Compile Include="Controllers\MasterDataVehicleSeatMainInfoController.cs" />
+    <Compile Include="Controllers\MasterDataVehicleSeatTypeController.cs" />
+    <Compile Include="Controllers\MasterDataVehicleTypeController.cs" />
+    <Compile Include="Controllers\MasterDataVehicleWcPillowTypeController.cs" />
+    <Compile Include="Controllers\MasterDataVehicleWcTypeController.cs" />
+    <Compile Include="Controllers\MasterDataWallConnectionController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\OrderStatusController.cs" />
+    <Compile Include="dto\ExternalDto\ExMasterDataDto.cs" />
+    <Compile Include="dto\ExternalDto\ExMasterDataSeatFabricTypeDto.cs" />
+    <Compile Include="dto\ExternalDto\ExMasterDataSeatTypeDto.cs" />
+    <Compile Include="dto\ExternalDto\ExStationMaterialDto.cs" />
+    <Compile Include="dto\ExternalDto\ExMaterialDto.cs" />
+    <Compile Include="dto\ExternalDto\ExMaterialGroupByVehicleDto.cs" />
+    <Compile Include="dto\ExternalDto\ExMaterialWarehouseDto.cs" />
+    <Compile Include="dto\ExternalDto\ExStationDto.cs" />
+    <Compile Include="dto\ExternalDto\ExVehicleMaterialDto.cs" />
+    <Compile Include="dto\ExternalDto\ExVehicleDto.cs" />
+    <Compile Include="dto\ExternalDto\ExVehicleFilterDto.cs" />
+    <Compile Include="dto\ExternalDto\ExSeatPlacementDto.cs" />
+    <Compile Include="dto\FindCommentDto.cs" />
+    <Compile Include="dto\MasterDataSeatFrameCharacteristicDto.cs" />
+    <Compile Include="dto\MasterDataSeatFrameDto.cs" />
+    <Compile Include="dto\MasterDataSeatFramePartListDto.cs" />
+    <Compile Include="dto\MasterDataSupportTubesDto.cs" />
+    <Compile Include="dto\OrderWorkingUnitReportCommentDto.cs" />
+    <Compile Include="dto\OrderStatusInfoDto.cs" />
+    <Compile Include="dto\ReportCommentDto.cs" />
+    <Compile Include="dto\ReportLogDto.cs" />
+    <Compile Include="dto\MasterDataAdditionalDisclosureDto.cs" />
+    <Compile Include="dto\MasterDataAdjustingLeverDto.cs" />
+    <Compile Include="dto\MasterDataBackrestAdjusterDto.cs" />
+    <Compile Include="dto\MasterDataChairFootDto.cs" />
+    <Compile Include="dto\MasterDataChairTypeDto.cs" />
+    <Compile Include="dto\MasterDataEBBeltDto.cs" />
+    <Compile Include="dto\ErrorDto.cs" />
+    <Compile Include="dto\MasterDataLateralAdjustmentDto.cs" />
+    <Compile Include="dto\MasterDataColourDto.cs" />
+    <Compile Include="dto\MasterDataMaterialDto.cs" />
+    <Compile Include="dto\MasterDataMaterialMasterDto.cs" />
+    <Compile Include="dto\MasterDataRearSeatPanDto.cs" />
+    <Compile Include="dto\MasterDataVehicleBackRowPillowDto.cs" />
+    <Compile Include="dto\MasterDataVehicleDto.cs" />
+    <Compile Include="dto\MasterDataVehicleHandHolderDecorateDto.cs" />
+    <Compile Include="dto\MasterDataVehicleHolderAssemblyTypeDto.cs" />
+    <Compile Include="dto\MasterDataVehicleMaterialDto.cs" />
+    <Compile Include="dto\MasterDataVehicleModelDto.cs" />
+    <Compile Include="dto\MasterDataVehiclePillowDto.cs" />
+    <Compile Include="dto\MasterDataVehicleSeatFabricDto.cs" />
+    <Compile Include="dto\MasterDataVehicleSeatHeaderFastenerTypeDto.cs" />
+    <Compile Include="dto\MasterDataVehicleSeatMainInfoDto.cs" />
+    <Compile Include="dto\MasterDataVehicleSeatTypeDto.cs" />
+    <Compile Include="dto\MasterDataVehicleTypeDto.cs" />
+    <Compile Include="dto\MasterDataVehicleWcPillowTypeDto.cs" />
+    <Compile Include="dto\MasterDataVehicleWcTypeDto.cs" />
+    <Compile Include="dto\OrderDto.cs" />
+    <Compile Include="dto\OrderStatusDto.cs" />
+    <Compile Include="dto\RemarkDto.cs" />
+    <Compile Include="dto\MasterDataSideCoverDto.cs" />
+    <Compile Include="dto\MasterDataStatusDto.cs" />
+    <Compile Include="dto\MasterDataSTCharacteristicDto.cs" />
+    <Compile Include="dto\MasterDataSTMaterialMasterDto.cs" />
+    <Compile Include="dto\MasterDataWallConnectionDto.cs" />
+    <Compile Include="dto\ReportOrderDto.cs" />
+    <Compile Include="dto\SearchBBNR.cs" />
+    <Compile Include="dto\WorkingUnitDto.cs" />
+    <Compile Include="Exceptions\Seat2GetherExceptionWithCode.cs" />
+    <Compile Include="Models\ExternalModels\ExMasterDataSeatFabricType.cs" />
+    <Compile Include="Models\ExternalModels\ExMaterialWarehouse.cs" />
+    <Compile Include="Models\ExternalModels\ExMasterData.cs" />
+    <Compile Include="Models\ExternalModels\ExMasterDataType.cs" />
+    <Compile Include="Models\ExternalModels\ExSeatPlacement.cs" />
+    <Compile Include="Models\ExternalModels\ExMasterDataSeatType.cs" />
+    <Compile Include="Models\MasterDataSeatFrame.cs" />
+    <Compile Include="Models\MasterDataSeatFrameCharacteristic.cs" />
+    <Compile Include="Models\MasterDataSeatFramePartList.cs" />
+    <Compile Include="Models\MasterDataSupportTubes.cs" />
+    <Compile Include="Models\OrderWorkingUnitReportComment.cs" />
+    <Compile Include="Models\OrderStatusInfo.cs" />
+    <Compile Include="Models\ReportComment.cs" />
+    <Compile Include="Models\ReportLog.cs" />
+    <Compile Include="Models\ExternalModels\ExStation.cs" />
+    <Compile Include="Models\ExternalModels\ExVehicleMaterial.cs" />
+    <Compile Include="Models\ExternalModels\ExVehicle.cs" />
+    <Compile Include="Models\ReportOrder.cs" />
+    <Compile Include="Models\VehicleMasterData.cs" />
+    <Compile Include="Models\MasterDataAdditionalDisclosure.cs" />
+    <Compile Include="Models\MasterDataAdjustingLever.cs" />
+    <Compile Include="Models\MasterDataBackrestAdjuster.cs" />
+    <Compile Include="Models\MasterDataChairFoot.cs" />
+    <Compile Include="Models\MasterDataChairType.cs" />
+    <Compile Include="Models\MasterDataEBBelt.cs" />
+    <Compile Include="Models\Error.cs" />
+    <Compile Include="Models\MasterDataLateralAdjustment.cs" />
+    <Compile Include="Models\MasterDataColour.cs" />
+    <Compile Include="Models\MasterDataMaterial.cs" />
+    <Compile Include="Models\MasterDataMaterialMaster.cs" />
+    <Compile Include="Models\MasterDataRearSeatPan.cs" />
+    <Compile Include="Models\MasterDataRemark.cs" />
+    <Compile Include="Models\MasterDataSideCover.cs" />
+    <Compile Include="Models\MasterDataStatus.cs" />
+    <Compile Include="Models\MasterDataSTCharacteristic.cs" />
+    <Compile Include="Models\MasterDataSTMaterialMaster.cs" />
+    <Compile Include="Models\MasterDataVehicle.cs" />
+    <Compile Include="Models\MasterDataVehicleBackRowPillow.cs" />
+    <Compile Include="Models\MasterDataVehicleHandHolderDecorate.cs" />
+    <Compile Include="Models\MasterDataVehicleHolderAssemblyType.cs" />
+    <Compile Include="Models\MasterDataVehicleMaterial.cs" />
+    <Compile Include="Models\MasterDataVehicleModel.cs" />
+    <Compile Include="Models\MasterDataVehiclePillow.cs" />
+    <Compile Include="Models\MasterDataVehicleSeatFabric.cs" />
+    <Compile Include="Models\MasterDataVehicleSeatHeaderFastenerType.cs" />
+    <Compile Include="Models\MasterDataVehicleSeatMainInfo.cs" />
+    <Compile Include="Models\MasterDataVehicleSeatType.cs" />
+    <Compile Include="Models\MasterDataVehicleType.cs" />
+    <Compile Include="Models\MasterDataVehicleWcPillowType.cs" />
+    <Compile Include="Models\MasterDataVehicleWcType.cs" />
+    <Compile Include="Models\MasterDataWallConnection.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderStatus.cs" />
+    <Compile Include="Models\WorkingUnit.cs" />
+    <Compile Include="Reports\CummulativeAccessReports\Seat2GetherReports.aspx.cs">
+      <DependentUpon>Seat2GetherReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\CummulativeAccessReports\Seat2GetherReports.aspx.designer.cs">
+      <DependentUpon>Seat2GetherReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CummulativeAccessReports\Seat2GetherReportsDataSet.cs">
+      <DependentUpon>Seat2GetherReportsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CummulativeAccessReports\Seat2GetherReportsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Seat2GetherReportsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ExReports\MaterialsReport\MaterialsBySeat\MaterialsBySeat.aspx.cs">
+      <DependentUpon>MaterialsBySeat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ExReports\MaterialsReport\MaterialsBySeat\MaterialsBySeat.aspx.designer.cs">
+      <DependentUpon>MaterialsBySeat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ExReports\MaterialsReport\MaterialsByStation\MaterialsByStation.aspx.cs">
+      <DependentUpon>MaterialsByStation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ExReports\MaterialsReport\MaterialsByStation\MaterialsByStation.aspx.designer.cs">
+      <DependentUpon>MaterialsByStation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\ExternalRepositories\MasterDataSeatTypeRepository.cs" />
+    <Compile Include="Repositories\ExternalRepositories\MasterDataRepository.cs" />
+    <Compile Include="Repositories\ExternalRepositories\MasterDataSeatFabricTypeRepository.cs" />
+    <Compile Include="Repositories\ExternalRepositories\MaterialRepository.cs" />
+    <Compile Include="Repositories\ExternalRepositories\MaterialWarehouseRepository.cs" />
+    <Compile Include="Repositories\ExternalRepositories\SeatRepository.cs" />
+    <Compile Include="Repositories\ExternalRepositories\StationRepository.cs" />
+    <Compile Include="Repositories\ExternalRepositories\VehicleRepository.cs" />
+    <Compile Include="Repositories\MasterDataAdditionalDisclosureRepository.cs" />
+    <Compile Include="Repositories\MasterDataAdjustingLeverRepository.cs" />
+    <Compile Include="Repositories\MasterDataBackrestAdjusterRepository.cs" />
+    <Compile Include="Repositories\MasterDataChairFootRepository.cs" />
+    <Compile Include="Repositories\MasterDataChairTypeRepository.cs" />
+    <Compile Include="Repositories\MasterDataEBBeltRepository.cs" />
+    <Compile Include="Repositories\ErrorRepository.cs" />
+    <Compile Include="Repositories\MasterDataLateralAdjustmentRepository.cs" />
+    <Compile Include="Repositories\MasterDataColourRepository.cs" />
+    <Compile Include="Repositories\MasterDataMaterialMasterRepository.cs" />
+    <Compile Include="Repositories\MasterDataMaterialRepository.cs" />
+    <Compile Include="Repositories\MasterDataRearSeatPanRepository.cs" />
+    <Compile Include="Repositories\MasterDataRemarkRepository.cs" />
+    <Compile Include="Repositories\MasterDataSeatFrameRepository.cs" />
+    <Compile Include="Repositories\MasterDataSideCoverRepository.cs" />
+    <Compile Include="Repositories\MasterDataStatusRepository.cs" />
+    <Compile Include="Repositories\MasterDataStCharacteristicRepository.cs" />
+    <Compile Include="Repositories\MasterDataSTMaterialMasterRepository.cs" />
+    <Compile Include="Repositories\MasterDataSupportTubesRepository.cs" />
+    <Compile Include="Repositories\MasterDataVehicleBackRowPillowRepository.cs" />
+    <Compile Include="Repositories\MasterDataVehicleHandHolderDecorateRepository.cs" />
+    <Compile Include="Repositories\MasterDataVehicleHolderAssemblyTypeRepository.cs" />
+    <Compile Include="Repositories\MasterDataVehicleMaterialRepository.cs" />
+    <Compile Include="Repositories\MasterDataVehicleModelRepository.cs" />
+    <Compile Include="Repositories\MasterDataVehiclePillowRepository.cs" />
+    <Compile Include="Repositories\MasterDataVehicleRepository.cs" />
+    <Compile Include="Repositories\MasterDataVehicleSeatFabricRepository.cs" />
+    <Compile Include="Repositories\MasterDataVehicleSeatHeaderFastenerTypeRepository.cs" />
+    <Compile Include="Repositories\MasterDataVehicleSeatMainInfoRepository.cs" />
+    <Compile Include="Repositories\MasterDataVehicleSeatTypeRepository.cs" />
+    <Compile Include="Repositories\MasterDataVehicleTypeRepository.cs" />
+    <Compile Include="Repositories\MasterDataVehicleWcPillowTypeRepository.cs" />
+    <Compile Include="Repositories\MasterDataVehicleWcTypeRepository.cs" />
+    <Compile Include="Repositories\MasterDataWallConnectionRepository.cs" />
+    <Compile Include="Repositories\OrderWorkingUnitReportCommentRepository.cs" />
+    <Compile Include="Repositories\OrderRepository.cs" />
+    <Compile Include="Repositories\OrderStatusInfoRepository.cs" />
+    <Compile Include="Repositories\OrderStatusRepository.cs" />
+    <Compile Include="Repositories\ReportRepository.cs" />
+    <Compile Include="services\ExternalServices\ExMasterDataSeatFabricTypeService.cs" />
+    <Compile Include="services\ExternalServices\FileParserService.cs" />
+    <Compile Include="services\ExternalServices\MasterDataSeatTypeService.cs" />
+    <Compile Include="services\ExternalServices\MasterDataService.cs" />
+    <Compile Include="services\ExternalServices\MaterialService.cs" />
+    <Compile Include="services\ExternalServices\MaterialWarehouseService.cs" />
+    <Compile Include="services\ExternalServices\SeatService.cs" />
+    <Compile Include="services\ExternalServices\StationService.cs" />
+    <Compile Include="services\ExternalServices\VehicleService.cs" />
+    <Compile Include="services\MasterDataAdditionalDisclosureService.cs" />
+    <Compile Include="services\MasterDataAdjustingLeverService.cs" />
+    <Compile Include="services\MasterDataBackrestAdjusterService.cs" />
+    <Compile Include="services\MasterDataChairFootService.cs" />
+    <Compile Include="services\MasterDataChairTypeService.cs" />
+    <Compile Include="services\MasterDataEBBeltService.cs" />
+    <Compile Include="services\ErrorService.cs" />
+    <Compile Include="services\MasterDataLateralAdjustmentService.cs" />
+    <Compile Include="services\MasterDataColourService.cs" />
+    <Compile Include="services\MasterDataMaterialMasterService.cs" />
+    <Compile Include="services\MasterDataMaterialService.cs" />
+    <Compile Include="services\MasterDataRearSeatPanService.cs" />
+    <Compile Include="services\MasterDataRemarkService.cs" />
+    <Compile Include="services\MasterDataSeatFrameService.cs" />
+    <Compile Include="services\MasterDataSideCoverService.cs" />
+    <Compile Include="services\MasterDataStatusService.cs" />
+    <Content Include="Reports\CummulativeAccessReports\Seat2GetherReports.aspx" />
+    <Content Include="Reports\ExReports\MaterialsReport\MaterialsBySeat\MaterialsBySeat.aspx" />
+    <Content Include="Reports\ExReports\MaterialsReport\MaterialsByStation\MaterialsByStation.aspx" />
+    <Content Include="seat2gether_logo_3d_x3R_icon.ico" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll" />
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll" />
+    <Content Include="SqlServerTypes\x86\msvcr120.dll" />
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\LDAPController.cs" />
+    <Compile Include="Controllers\MasterDataCharacteristicController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\SpecialChairPartOneController.cs" />
+    <Compile Include="Controllers\SpecialChairPartTwoController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="dto\BBNRDto.cs" />
+    <Compile Include="dto\BBNRKSWDto.cs" />
+    <Compile Include="dto\BBNRRemarksCutDto.cs" />
+    <Compile Include="dto\BBNRUADiversesDto.cs" />
+    <Compile Include="dto\BBNRUADriverChairDto.cs" />
+    <Compile Include="dto\BBNRUADriverChairPartsListDto.cs" />
+    <Compile Include="dto\MasterDataCharacteristicDto.cs" />
+    <Compile Include="dto\GeneralParamDto.cs" />
+    <Compile Include="dto\MenuDto\Data.cs" />
+    <Compile Include="dto\MenuDto\MainMenuItem.cs" />
+    <Compile Include="dto\MenuDto\Menu.cs" />
+    <Compile Include="dto\MenuDto\MenuItem.cs" />
+    <Compile Include="dto\RoleDto.cs" />
+    <Compile Include="dto\UserDto.cs" />
+    <Compile Include="dto\VariantDriverChairDto.cs" />
+    <Compile Include="Models\BBNR.cs" />
+    <Compile Include="Models\BBNRKSW.cs" />
+    <Compile Include="Models\BBNRRemarksCut.cs" />
+    <Compile Include="Models\BBNRUADiverses.cs" />
+    <Compile Include="Models\BBNRUASpecialChair.cs" />
+    <Compile Include="Models\BBNRUASpecialChairPartsList.cs" />
+    <Compile Include="Models\MasterDataCharacteristic.cs" />
+    <Compile Include="Models\GeneralParam.cs" />
+    <Compile Include="Models\LDAPUser.cs" />
+    <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\RoleMenu.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserClaim.cs" />
+    <Compile Include="Models\UserRole.cs" />
+    <Compile Include="Models\VariantDriverChair.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Providers\SimpleAuthorizationServerProvider.cs" />
+    <Compile Include="Repositories\AccountRepository.cs" />
+    <Compile Include="Repositories\MasterDataCharacteristicRepository.cs" />
+    <Compile Include="Repositories\GeneralParamRepository.cs" />
+    <Compile Include="Repositories\LDAPRepository.cs" />
+    <Compile Include="Repositories\MenuRepository.cs" />
+    <Compile Include="Repositories\RoleRepository.cs" />
+    <Compile Include="Repositories\SpecialChairRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="services\MasterDataCharacteristicService.cs" />
+    <Compile Include="services\FileService.cs" />
+    <Compile Include="services\GeneralParamService.cs" />
+    <Compile Include="services\LDAPService.cs" />
+    <Compile Include="services\MasterDataSupportTubesService.cs" />
+    <Compile Include="services\MasterDataVehicleBackRowPillowService.cs" />
+    <Compile Include="services\MasterDataVehicleHandHolderDecorateService.cs" />
+    <Compile Include="services\MasterDataVehicleHolderAssemblyTypeService.cs" />
+    <Compile Include="services\MasterDataVehicleMaterialService.cs" />
+    <Compile Include="services\MasterDataVehicleModelService.cs" />
+    <Compile Include="services\MasterDataVehiclePillowService.cs" />
+    <Compile Include="services\MasterDataVehicleSeatFabricService.cs" />
+    <Compile Include="services\MasterDataVehicleSeatHeaderFastenerTypeService.cs" />
+    <Compile Include="services\MasterDataVehicleSeatMainInfoService.cs" />
+    <Compile Include="services\MasterDataVehicleSeatTypeService.cs" />
+    <Compile Include="services\MasterDataVehicleService.cs" />
+    <Compile Include="services\MasterDataVehicleTypeService.cs" />
+    <Compile Include="services\MasterDataVehicleWcPillowTypeService.cs" />
+    <Compile Include="services\MasterDataVehicleWcTypeService.cs" />
+    <Compile Include="services\MenuService.cs" />
+    <Compile Include="services\OrderWorkingUnitReportCommentService.cs" />
+    <Compile Include="services\OrderService.cs" />
+    <Compile Include="services\OrderStatusInfoService.cs" />
+    <Compile Include="services\OrderStatusService.cs" />
+    <Compile Include="services\ReportService.cs" />
+    <Compile Include="services\RoleService.cs" />
+    <Compile Include="services\SpecialChairService.cs" />
+    <Compile Include="services\MasterDataStCharacteristicService.cs" />
+    <Compile Include="services\MasterDataSTMaterialMasterService.cs" />
+    <Compile Include="services\UserService.cs" />
+    <Compile Include="services\MasterDataWallConnectionService.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Utils\DataConverter.cs" />
+    <Compile Include="Utils\FileUtility.cs" />
+    <Compile Include="Utils\Constraints.cs" />
+    <Compile Include="Utils\LDAPUtil.cs" />
+    <Compile Include="Utils\MapperUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="log4net.config" />
+    <Content Include="free3of9.ttf" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\AhmetPublishProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\SelcukLocalApi.pubxml" />
+    <Content Include="Reports\CummulativeAccessReports\Seat2GetherReportsDataSet.xsc">
+      <DependentUpon>Seat2GetherReportsDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Reports\CummulativeAccessReports\Seat2GetherReportsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Seat2GetherReportsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Reports\CummulativeAccessReports\Seat2GetherReportsDataSet.xss">
+      <DependentUpon>Seat2GetherReportsDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CummulativeAccessReports\Seat2GetherReports.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CummulativeAccessReports\SubReportChairDazzle1.rdlc" />
+    <EmbeddedResource Include="Reports\CummulativeAccessReports\SubReportChairDazzle2.rdlc" />
+    <EmbeddedResource Include="Reports\CummulativeAccessReports\SubReportCut.rdlc" />
+    <EmbeddedResource Include="Reports\CummulativeAccessReports\SubReportGessler.rdlc" />
+    <EmbeddedResource Include="Reports\CummulativeAccessReports\SubReportMontage.rdlc" />
+    <EmbeddedResource Include="Reports\CummulativeAccessReports\SubReportMontageFond.rdlc" />
+    <EmbeddedResource Include="Reports\CummulativeAccessReports\SubReportSpecialChair.rdlc" />
+    <EmbeddedResource Include="Reports\CummulativeAccessReports\SubReportStitching1.rdlc" />
+    <EmbeddedResource Include="Reports\CummulativeAccessReports\SubReportStitching2.rdlc" />
+    <EmbeddedResource Include="Reports\CummulativeAccessReports\SubReportStitchingCurtain.rdlc" />
+    <EmbeddedResource Include="Reports\ExReports\MaterialsReport\MaterialsBySeat\MaterialsBySeat.rdlc" />
+    <EmbeddedResource Include="Reports\ExReports\MaterialsReport\MaterialsByStation\MaterialsByStation.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="CSharpFunctionalExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CSharpFunctionalExtensions.1.7.1\lib\netstandard1.0\CSharpFunctionalExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.6.2.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.6.2\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.12.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.12\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToLdap, Version=3.3.2.0, Culture=neutral, PublicKeyToken=d4ffa016fc97ad84, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToLdap.4.0\lib\net45\LinqToLdap.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToLdap.Contrib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d4ffa016fc97ad84, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToLdap.4.0\lib\net45\LinqToLdap.Contrib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Cors.3.1.0\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.DataVisualization.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.Design.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WebDesign.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Swashbuckle.Core.5.6.0\lib\net40\Swashbuckle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>seat2gether_logo_3d_x3R_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62379</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3200/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- <Import Project="..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" /> -->
+  <!-- <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+  </Target> -->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

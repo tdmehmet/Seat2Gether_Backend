@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8AAB54A9-A389-4815-90F1-2D24BA6B194A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Seat2Gether</RootNamespace>
+    <AssemblyName>Seat2Gether</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=6.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.0.2\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="CSharpFunctionalExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CSharpFunctionalExtensions.1.7.1\lib\netstandard1.0\CSharpFunctionalExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinqToLdap, Version=3.3.2.0, Culture=neutral, PublicKeyToken=d4ffa016fc97ad84, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToLdap.4.0\lib\net45\LinqToLdap.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToLdap.Contrib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d4ffa016fc97ad84, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToLdap.4.0\lib\net45\LinqToLdap.Contrib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.0.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.0.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.0.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors">
+      <HintPath>..\packages\Microsoft.Owin.Cors.2.1.0\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.9\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.1.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Cors">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.0.0\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.1.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.1.2\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.0\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\MasterDataAdditionalDisclosureController.cs" />
+    <Compile Include="Controllers\MasterDataAdjustingLeverController.cs" />
+    <Compile Include="Controllers\MasterDataBackrestAdjusterController.cs" />
+    <Compile Include="Controllers\MasterDataChairFootController.cs" />
+    <Compile Include="Controllers\MasterDataChairTypeController.cs" />
+    <Compile Include="Controllers\MasterdataColourController.cs" />
+    <Compile Include="Controllers\MasterDataEBBeltController.cs" />
+    <Compile Include="Controllers\MasterDataLateralAdjustmentController.cs" />
+    <Compile Include="Controllers\MasterDataMaterialMasterController.cs" />
+    <Compile Include="Controllers\MasterDataRearSeatPanController.cs" />
+    <Compile Include="Controllers\MasterDataRemarkController.cs" />
+    <Compile Include="Controllers\MasterDataSideCoverController.cs" />
+    <Compile Include="Controllers\MasterDataStatusController.cs" />
+    <Compile Include="Controllers\MasterDataStCharacteristicController.cs" />
+    <Compile Include="Controllers\MasterDataSTMaterialMasterController.cs" />
+    <Compile Include="Controllers\MasterDataWallConnectionController.cs" />
+    <Compile Include="dto\AdditionalDisclosureDto.cs" />
+    <Compile Include="dto\AdjustingLeverDto.cs" />
+    <Compile Include="dto\BackrestAdjusterDto.cs" />
+    <Compile Include="dto\ChairFootDto.cs" />
+    <Compile Include="dto\ChairTypeDto.cs" />
+    <Compile Include="dto\EBBeltDto.cs" />
+    <Compile Include="dto\ErrorDto.cs" />
+    <Compile Include="dto\LateralAdjustmentDto.cs" />
+    <Compile Include="dto\MasterDataColourDto.cs" />
+    <Compile Include="dto\MaterialMasterDto.cs" />
+    <Compile Include="dto\RearSeatPanDto.cs" />
+    <Compile Include="dto\RemarkDto.cs" />
+    <Compile Include="dto\SideCoverDto.cs" />
+    <Compile Include="dto\StatusDto.cs" />
+    <Compile Include="dto\STCharacteristicDto.cs" />
+    <Compile Include="dto\STMaterialMasterDto.cs" />
+    <Compile Include="dto\WallConnectionDto.cs" />
+    <Compile Include="Exceptions\Seat2GetherException.cs" />
+    <Compile Include="Exceptions\Seat2GetherExceptionWithCode.cs" />
+    <Compile Include="Models\AdditionalDisclosure.cs" />
+    <Compile Include="Models\AdjustingLever.cs" />
+    <Compile Include="Models\BackrestAdjuster.cs" />
+    <Compile Include="Models\ChairFoot.cs" />
+    <Compile Include="Models\ChairType.cs" />
+    <Compile Include="Models\EBBelt.cs" />
+    <Compile Include="Models\Error.cs" />
+    <Compile Include="Models\LateralAdjustment.cs" />
+    <Compile Include="Models\MasterDataColour.cs" />
+    <Compile Include="Models\MaterialMaster.cs" />
+    <Compile Include="Models\RearSeatPan.cs" />
+    <Compile Include="Models\Remark.cs" />
+    <Compile Include="Models\SideCover.cs" />
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\STCharacteristic.cs" />
+    <Compile Include="Models\STMaterialMaster.cs" />
+    <Compile Include="Models\WallConnection.cs" />
+    <Compile Include="Repositories\AdditionalDisclosureButtonRepository.cs" />
+    <Compile Include="Repositories\AdjustingLeverButtonRepository.cs" />
+    <Compile Include="Repositories\BackrestAdjusterButtonRepository.cs" />
+    <Compile Include="Repositories\ChairFootButtonRepository.cs" />
+    <Compile Include="Repositories\ChairTypeButtonRepository.cs" />
+    <Compile Include="Repositories\EBBeltButtonRepository.cs" />
+    <Compile Include="Repositories\ErrorRepository.cs" />
+    <Compile Include="Repositories\LateralAdjustmentButtonRepository.cs" />
+    <Compile Include="Repositories\MasterDataColourRepository.cs" />
+    <Compile Include="Repositories\MaterialMasterButtonRepository.cs" />
+    <Compile Include="Repositories\RearSeatPanButtonRepository.cs" />
+    <Compile Include="Repositories\RemarkButtonRepository.cs" />
+    <Compile Include="Repositories\SideCoverButtonRepository.cs" />
+    <Compile Include="Repositories\StatusButtonRepository.cs" />
+    <Compile Include="Repositories\StCharacteristicButtonRepository.cs" />
+    <Compile Include="Repositories\STMaterialMasterButtonRepository.cs" />
+    <Compile Include="Repositories\WallConnectionButtonRepository.cs" />
+    <Compile Include="services\AdditionalDisclosureButtonService.cs" />
+    <Compile Include="services\AdjustingLeverButtonService.cs" />
+    <Compile Include="services\BackrestAdjusterButtonService.cs" />
+    <Compile Include="services\ChairFootButtonService.cs" />
+    <Compile Include="services\ChairTypeButtonService.cs" />
+    <Compile Include="services\EBBeltButtonService.cs" />
+    <Compile Include="services\ErrorService.cs" />
+    <Compile Include="services\LateralAdjustmentButtonService.cs" />
+    <Compile Include="services\MasterDataColourService.cs" />
+    <Compile Include="services\MaterialMasterButtonService.cs" />
+    <Compile Include="services\RearSeatPanButtonService.cs" />
+    <Compile Include="services\RemarkButtonService.cs" />
+    <Compile Include="services\SideCoverButtonService.cs" />
+    <Compile Include="services\StatusButtonService.cs" />
+    <Content Include="seat2gether_logo_3d_x3R_icon.ico" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CutReportContentPartOneController.cs" />
+    <Compile Include="Controllers\CutReportContentPartThereeController.cs" />
+    <Compile Include="Controllers\CutReportContentPartTwoController.cs" />
+    <Compile Include="Controllers\FileController.cs" />
+    <Compile Include="Controllers\LDAPController.cs" />
+    <Compile Include="Controllers\MasterDataCharacteristicController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\ReportFooterController.cs" />
+    <Compile Include="Controllers\ReportHeaderController.cs" />
+    <Compile Include="Controllers\SpecialChairPartOneController.cs" />
+    <Compile Include="Controllers\SpecialChairPartTwoController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="dto\BBNRDto.cs" />
+    <Compile Include="dto\BBNRKSWDto.cs" />
+    <Compile Include="dto\BBNRRemarksCutDto.cs" />
+    <Compile Include="dto\BBNRUADiversesDto.cs" />
+    <Compile Include="dto\BBNRUADriverChairDto.cs" />
+    <Compile Include="dto\BBNRUADriverChairPartsListDto.cs" />
+    <Compile Include="dto\CharacteristicDto.cs" />
+    <Compile Include="dto\GeneralParamDto.cs" />
+    <Compile Include="dto\MenuDto\Data.cs" />
+    <Compile Include="dto\MenuDto\MainMenuItem.cs" />
+    <Compile Include="dto\MenuDto\Menu.cs" />
+    <Compile Include="dto\MenuDto\MenuItem.cs" />
+    <Compile Include="dto\RoleDto.cs" />
+    <Compile Include="dto\UserDto.cs" />
+    <Compile Include="dto\VariantDriverChairDto.cs" />
+    <Compile Include="Models\BBNR.cs" />
+    <Compile Include="Models\BBNRKSW.cs" />
+    <Compile Include="Models\BBNRRemarksCut.cs" />
+    <Compile Include="Models\BBNRUADiverses.cs" />
+    <Compile Include="Models\BBNRUASpecialChair.cs" />
+    <Compile Include="Models\BBNRUASpecialChairPartsList.cs" />
+    <Compile Include="Models\Characteristic.cs" />
+    <Compile Include="Models\GeneralParam.cs" />
+    <Compile Include="Models\LDAPUser.cs" />
+    <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\RoleMenu.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserClaim.cs" />
+    <Compile Include="Models\UserRole.cs" />
+    <Compile Include="Models\VariantDriverChair.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Providers\SimpleAuthorizationServerProvider.cs" />
+    <Compile Include="Repositories\AccountRepository.cs" />
+    <Compile Include="Repositories\CharacteristicButtonRepository.cs" />
+    <Compile Include="Repositories\GeneralParamRepository.cs" />
+    <Compile Include="Repositories\LDAPRepository.cs" />
+    <Compile Include="Repositories\MenuRepository.cs" />
+    <Compile Include="Repositories\RoleRepository.cs" />
+    <Compile Include="Repositories\SpecialChairRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Repositories\CutRepository.cs" />
+    <Compile Include="services\CharacteristicButtonService.cs" />
+    <Compile Include="services\FileService.cs" />
+    <Compile Include="services\GeneralParamService.cs" />
+    <Compile Include="services\LDAPService.cs" />
+    <Compile Include="services\MenuService.cs" />
+    <Compile Include="services\RoleService.cs" />
+    <Compile Include="services\SpecialChairService.cs" />
+    <Compile Include="services\StCharacteristicButtonService.cs" />
+    <Compile Include="services\STMaterialMasterButtonService.cs" />
+    <Compile Include="services\UserService.cs" />
+    <Compile Include="services\CutService.cs" />
+    <Compile Include="services\WallConnectionButtonService.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Utils\FileUtility.cs" />
+    <Compile Include="Utils\Constraints.cs" />
+    <Compile Include="Utils\LDAPUtil.cs" />
+    <Compile Include="Utils\MapperUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="log4net.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>seat2gether_logo_3d_x3R_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62379</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:9093/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
